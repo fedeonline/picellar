@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :picellar, Picellar.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "picellar_dev",
+  username: "fridge_api_dev",
+  password: "rF66aP59171v8",
+  database: "fridge_api_dev",
   hostname: "localhost",
   pool_size: 10

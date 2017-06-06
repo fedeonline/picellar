@@ -20,7 +20,12 @@ defmodule Picellar.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Picellar do
-  #   pipe_through :api
-  # end
+  scope "/api/v1", Picellar do
+    pipe_through :api
+
+    get "temperatures", TemperatureController, :index   
+    get "temperatures/:id", TemperatureController, :show
+    post "temperatures", TemperatureController, :create
+    delete "temperatures/:id", TemperatureController, :delete
+  end
 end
